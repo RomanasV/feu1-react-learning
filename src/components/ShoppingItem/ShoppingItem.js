@@ -1,8 +1,10 @@
 import React from 'react'
 
-const ShoppingItem = (props) => {
+const ShoppingItem = ({title}) => {
   return (
-    <div>ShoppingItem</div>
+    <div>
+      <span>{title}</span>
+    </div>
   )
 }
 

@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage';
 import Navigation from './components/Navigation/Navigation';
+import ShoppingPage from './pages/ShoppingPage';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/shopping-list' element={<h1>Shopping List</h1>} />
+        <Route path='/shopping-list' element={<ShoppingPage />} />
         <Route path='*' element={<h1>404 error. Page not found</h1>} />
       </Routes>
     </div>
