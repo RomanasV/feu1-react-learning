@@ -2,7 +2,7 @@ import React from 'react'
 
 const ShoppingItem = ({title}) => {
   return (
-    <div>
+    <div className='shopping-item'>
       <span>{title}</span>
     </div>
   )

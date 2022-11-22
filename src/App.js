@@ -8,7 +8,7 @@ import TodoPage from './pages/TodoPage';
 
 function App() {
   return (
-    <div>
+    <div className='page-wrapper'>
       <Navigation />
       <Routes>
         <Route path='/' element={<HomePage />} />

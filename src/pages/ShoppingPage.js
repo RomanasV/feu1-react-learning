@@ -24,13 +24,15 @@ const ShoppingPage = () => {
   // }
 
   return (
-    <div>
-      <h1>Shopping List</h1>
-      <div className='shopping-list'>
-        {/* {renderShoppingList(list)} */}
+    <div className='page-content'>
+      <h2 className='page-title'>{list.length > 0 ? 'Shopping List' : 'No items'}</h2>
+      {list.length > 0 && (
+        <div className='shopping-list'>
+          {/* {renderShoppingList(list)} */}
 
-        {list.map((item, index) => <ShoppingItem key={index} title={item.title} />)}
-      </div>
+          {list.map((item, index) => <ShoppingItem key={index} title={item.title} />)}
+        </div>
+      )}
     </div>
   )
 }
