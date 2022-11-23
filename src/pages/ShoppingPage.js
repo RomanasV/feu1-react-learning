@@ -9,7 +9,7 @@ const ShoppingPage = () => {
     },
     {
       title: 'Butter',
-      done: false,
+      done: true,
     },
     {
       title: 'Eggs',
@@ -30,7 +30,7 @@ const ShoppingPage = () => {
         <div className='shopping-list'>
           {/* {renderShoppingList(list)} */}
 
-          {list.map((item, index) => <ShoppingItem key={index} title={item.title} />)}
+          {list.map((item, index) => <ShoppingItem key={index} title={item.title} done={item.done} />)}
         </div>
       )}
     </div>
