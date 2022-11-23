@@ -21,22 +21,7 @@ CARS užduotis:
 2. Tokiu pačiu principu, kaip pirmoje užduotyje, išvesti automobilių informaciją į ekraną. 
 3. Pridėti stilių.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 CITIES užduotis:
-
 1. Sukurti masyvą, kuriame būtų 10 skirtingų miestų. Kiekvienas miestas turi būti objekto tipo ir turi turėti šiuos properties:
  1.1. name - miesto pavadinimas (string)
  1.2. population - miesto populiacija (number)
