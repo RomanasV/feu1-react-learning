@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react';
+import './TodoItem.css';
 
 const TodoItem = ({ title, done }) => {
-  let progressText = done ? 'Done' : 'In progress';
-  let doneClass = done ? 'todo-item done' : 'todo-item';
+  const [isDone, setIsDone] = useState(done);
+
+  let progressText = isDone ? 'Done' : 'In progress';
+  let doneClass = isDone ? 'todo-item done' : 'todo-item';
+
+  function clickHandler() {
+    setIsDone(!isDone);
+  }
 
   return (
-    <li className={doneClass}>{title} ({progressText})</li>
+    <li className={doneClass} onClick={clickHandler}>{title} ({progressText})</li>
   )
 }
 
