@@ -6,6 +6,7 @@ import ShoppingPage from './pages/ShoppingPage';
 import TodoPage from './pages/TodoPage';
 import CarsPage from './pages/CarsPage';
 import CitiesPage from './pages/CitiesPage';
+import CounterPage from './pages/CounterPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/todo' element={<TodoPage />} />
         <Route path='/cars' element={<CarsPage />} />
         <Route path='/cities' element={<CitiesPage />} />
+        <Route path='/counter' element={<CounterPage />} />
         <Route path='*' element={<h1>404 error. Page not found</h1>} />
       </Routes>
     </div>
