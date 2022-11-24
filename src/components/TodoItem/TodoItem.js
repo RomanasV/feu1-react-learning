@@ -8,7 +8,13 @@ const TodoItem = ({ title, done }) => {
   let doneClass = isDone ? 'todo-item done' : 'todo-item';
 
   function clickHandler() {
-    setIsDone(!isDone);
+    // setIsDone(!isDone);
+
+    // setIsDone((prevState) => {
+    //   return !prevState;
+    // });
+
+    setIsDone(prevState => !prevState);
   }
 
   return (
