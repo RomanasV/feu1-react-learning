@@ -2,34 +2,17 @@ import React, { useState } from 'react'
 
 const CounterPage = () => {
   const [count, setCount] = useState(5);
+  const countClass = count > 4 ? 'color-green' : 'color-red';
 
-  const plusOneHandler = () => {
-    // setCount((prevState) => {
-    //   return prevState + 1;
-    // });
-
-    setCount(prevState => prevState + 1);
-  }
-
-  const plusTwoHandler = () => {
-    setCount(prevState => prevState + 2);
-  }
-
-  const minusOneHandler = () => {
-    setCount(prevState => prevState - 1);
-  }
-
-  const minusTwoHandler = () => {
-    setCount(prevState => prevState - 2);
-  }
+  const counterHandler = (num) => setCount(prevState => prevState + num);
 
   return (
     <div style={{padding: '10px 30px 100px' }}>
-      <div>{count}</div>
-      <button onClick={minusTwoHandler}>-2</button>
-      <button onClick={minusOneHandler}>-1</button>
-      <button onClick={plusOneHandler}>+1</button>
-      <button onClick={plusTwoHandler}>+2</button>
+      <div className={countClass}>{count}</div>
+      <button onClick={() => counterHandler(-2)} disabled={count < 3 ? true : null}>-2</button>
+      <button onClick={() => counterHandler(-1)} disabled={count < 2 ? true : null}>-1</button>
+      <button onClick={() => counterHandler(1)} disabled={count > 9 ? true : null}>+1</button>
+      <button onClick={() => counterHandler(2)} disabled={count > 8 ? true : null}>+2</button>
     </div>
   )
 }
