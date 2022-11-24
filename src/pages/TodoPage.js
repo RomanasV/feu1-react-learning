@@ -30,20 +30,35 @@ const TodoPage = () => {
   ];
 
   const [todoList, setTodoList] = useState(initialTodos);
+  const [todoItem, setTodoItem] = useState('');
 
   let pageTitle = todoList.length > 0 ? 'Todo List:' : 'No items...';
 
+  // const submitHandler = (event) => {
+  //   event.preventDefault();
+  //   let input = event.target.elements['todo-input'].value;
+
+  //   let todoData = {
+  //     title: input,
+  //     done: false
+  //   }
+
+  //   setTodoList((prevState) => [todoData, ...prevState]);
+  // }
+
   const submitHandler = (event) => {
     event.preventDefault();
-    let input = event.target.elements['todo-input'].value;
 
     let todoData = {
-      title: input,
+      title: todoItem,
       done: false
     }
 
     setTodoList((prevState) => [todoData, ...prevState]);
+    setTodoItem('');
   }
+
+  const todoInputHandler = event => setTodoItem(event.target.value);
 
   return (
     <div className='main-content'>
@@ -51,7 +66,7 @@ const TodoPage = () => {
 
       <form onSubmit={submitHandler}>
         <label htmlFor='todo-input'>Enter your todo</label>
-        <input type='text' id='todo-input' />
+        <input type='text' id='todo-input' value={todoItem} onChange={todoInputHandler} />
         <input type='submit' value='Add Todo' />
       </form>
 
