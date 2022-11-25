@@ -6,8 +6,26 @@
   color: green;
 }
 
+.page-content {
+  max-width: 1100px;
+  margin: 0 auto 300px;
+  padding: 0 15px;
+}
+
 .shopping-form {
   margin-bottom: 50px;
   padding-bottom: 15px;
   border-bottom: 1px solid black;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.cars-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
